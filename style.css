@@ -1,16 +1,14 @@
-/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
-
 :root {
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
-  --color-primary-darker: #4bbb7d;
+  --color-primary-darker: #7e559b;
   --color-secondary-darker: #ffbb00;
   --color-tertiary-darker: #fd424b;
   --color-primary-opacity: #5ec5763a;
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-primary: linear-gradient(to top left, #7e559b, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
@@ -28,9 +26,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #444;
+  color: #e0deea;
   line-height: 1.9;
-  background-color: #f3f3f3;
+  background-color: #14131a;
 }
 
 /* GENERAL ELEMENTS */
@@ -97,7 +95,7 @@ body {
 }
 
 p {
-  color: #666;
+  color: #d5d4d9;
 }
 
 /* This is BAD for accessibility! Don't do in the real world! */
@@ -127,7 +125,7 @@ img {
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  /* background-color: rgba(255, 255, 255, 0.95); */
 }
 
 .nav__logo {
@@ -149,7 +147,7 @@ img {
 .nav__link:visited {
   font-size: 1.7rem;
   font-weight: 400;
-  color: inherit;
+  color: #eeece7;
   text-decoration: none;
   display: block;
   transition: all 0.3s;
@@ -165,7 +163,7 @@ img {
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
-  color: inherit;
+  color: #eeece7;
   background-color: var(--color-primary-darker);
   color: #333;
 }
@@ -274,7 +272,7 @@ h4 {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
 
-  background-color: #fff;
+  background-color: #14131a;
 }
 
 .operations__tab-container {
@@ -490,7 +488,7 @@ h4 {
 .testimonial__text {
   font-size: 1.7rem;
   margin-bottom: 3.5rem;
-  color: #666;
+  color: #e7e6ec;
 }
 
 .testimonial__author {
@@ -593,7 +591,7 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #f3f3f3;
+  /* background-color: #f3f3f3; */
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
