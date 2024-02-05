@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
+
   </head>
   <body>
     <header class="header">
@@ -240,7 +241,7 @@
               alias reiciendis, perferendis facere.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
               <h6 class="testimonial__name"></h6>
               <p class="testimonial__location"></p>
             </address>
@@ -301,17 +302,27 @@
          <span class="highlight">work together?</span>
       </h2>
       <form class="modal__form">
-        <label>Name</label>
-        <input type="text" />
-        <label>Email Address</label>
-        <input type="text" />
-        <label>Your Message</label>
-        <input type="email" />
-        <button class="btn">Submit &rarr;</button>
+        <label >Name</label>
+        <input id="fullname" type="text" />
+        <label >Email Address</label>
+        <input id="email" type="email" />
+        <label >Your Message</label>
+        <input id="message" type="text" />
+        <button class="btn submit" onclick="sendMail()">Submit &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "vc_msvwqJNdOBwCF3",
+        });
+      })();
+    </script>
   </body>
 </html>

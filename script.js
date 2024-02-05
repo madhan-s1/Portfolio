@@ -30,6 +30,9 @@ btnCloseModal.addEventListener('click', close);
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
 });
+overlay.addEventListener('click', function () {
+  if (!modal.classList.contains('hidden')) close();
+});
 
 // ! Smooth scroling:
 btnScrollTo.addEventListener('click', function () {
@@ -42,8 +45,10 @@ navLink.forEach(function (el) {
   el.addEventListener('click', function (e) {
     e.preventDefault();
     let id = this.getAttribute('href');
-    console.log(id);
-    document.querySelector(`${id}`).scrollIntoView({ behavior: 'smooth' });
+    // console.log(id);
+    if (id !== '#') {
+      document.querySelector(`${id}`).scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
@@ -197,3 +202,25 @@ const slider = function () {
   btnLeft.addEventListener('click', prevSlide);
 };
 slider();
+
+const sendMail = function () {
+  let params = {
+    name: document.getElementById('fullname').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+
+  emailjs
+    .send('service_f902xwx', 'template_6dzivql', params)
+    .then(function (res) {
+      console.log(res);
+      alert('Success!' + res.status);
+    })
+    .catch(function (error) {
+      console.error('Error:', error);
+      alert('Failed to send email. Please try again.');
+    });
+};
+
+// const submit = document.querySelector('.submit');
+// submit.addEventListener('click', sendMail);
