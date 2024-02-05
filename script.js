@@ -214,11 +214,13 @@ const sendMail = function () {
     .send('service_f902xwx', 'template_6dzivql', params)
     .then(function (res) {
       console.log(res);
-      alert('Success!' + res.status);
+      alert(`I'll contact you shortly!` + res.status);
     })
     .catch(function (error) {
       console.error('Error:', error);
-      alert('Failed to send email. Please try again.');
+      alert(
+        'Failed to submit. Please try again or drop a mail to madhan038s@gmail.com'
+      );
     });
 };
 
