@@ -670,3 +670,14 @@ h4 {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 60%;
+  }
+
+  .section {
+    padding: 8rem 1.5rem;
+  }
+}

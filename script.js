@@ -55,7 +55,7 @@ const handleHover = function (el) {
     // console.log(link);
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
     // console.log(siblings);
-    const logo = link.closest('.nav').querySelector('img');
+    const logo = link.closest('.nav').querySelector('#logo');
     // console.log(logo);
 
     siblings.forEach(el => {
