@@ -204,7 +204,7 @@ const slider = function () {
 slider();
 
 const sendMail = function () {
-  let params = {
+  var params = {
     name: document.getElementById('fullname').value,
     email: document.getElementById('email').value,
     message: document.getElementById('message').value,
